@@ -1,0 +1,52 @@
+.navbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding: 0 20px;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-link {
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links-container {
+      width: 100%;  // Ajusta a largura para telas menores
+      justify-content: center;  // Centraliza os links
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links-container {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-container {
+      padding: 10px;  // Ajuste o padding para que o logo tenha um espaço confortável
+      width: 60px;  // Reduz o tamanho do logo em telas pequenas
+    }
+  }
+}
