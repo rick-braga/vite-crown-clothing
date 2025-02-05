@@ -1,0 +1,19 @@
+// Mixins para reutilização
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition-default {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content; }
+  }
+}
